@@ -660,10 +660,9 @@ p { color: var(--clr-text-muted); line-height: 1.8; }
 
 .hero-image-wrap .main-image {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--clr-border);
+  object-position: center top;
   display: block;
 }
 
@@ -1930,10 +1929,4 @@ footer {
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
-.hero-image-wrap .main-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
+
