@@ -1,0 +1,199 @@
+/* ============================================================
+   PORTFOLIO PRO TEMPLATE — dark-mode.css
+   Light mode overrides + dark/light toggle transitions
+   The default theme is dark. Light mode applies when
+   body has class "light-mode" or via prefers-color-scheme.
+   ============================================================ */
+
+/* ── Transition: Smooth mode switch ── */
+body.mode-transitioning,
+body.mode-transitioning * {
+  transition: background-color 0.35s ease,
+              color 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease !important;
+}
+
+/* ── Light Mode Variables ── */
+body.light-mode {
+  --clr-bg:          #F7F7FA;
+  --clr-surface:     #FFFFFF;
+  --clr-surface-2:   #F0F0F5;
+  --clr-border:      #E0E0EB;
+  --clr-accent:      #6648E8;
+  --clr-accent-2:    #00B396;
+  --clr-accent-glow: rgba(102, 72, 232, 0.15);
+  --clr-text:        #1C1C2E;
+  --clr-text-muted:  #5A5A78;
+  --clr-text-faint:  #A0A0B8;
+  --clr-white:       #1C1C2E;
+}
+
+/* Light mode specific overrides */
+body.light-mode #navbar.scrolled {
+  background: rgba(247, 247, 250, 0.9);
+  box-shadow: 0 1px 0 var(--clr-border);
+}
+
+body.light-mode .hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 30%, rgba(102, 72, 232, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(0, 179, 150, 0.05) 0%, transparent 50%);
+}
+
+body.light-mode .hero-grid-overlay {
+  opacity: 0.12;
+}
+
+body.light-mode #preloader {
+  background: var(--clr-bg);
+}
+
+body.light-mode .nav-mobile {
+  background: rgba(247, 247, 250, 0.98);
+}
+
+body.light-mode .service-card::before {
+  background: linear-gradient(135deg, rgba(102, 72, 232, 0.05), transparent);
+}
+
+body.light-mode .cta-box {
+  background: linear-gradient(135deg, #fff 0%, rgba(102, 72, 232, 0.05) 100%);
+}
+
+body.light-mode .page-header::before {
+  background: radial-gradient(circle, rgba(102, 72, 232, 0.05) 0%, transparent 70%);
+}
+
+body.light-mode .marquee-section {
+  background: var(--clr-surface);
+}
+
+body.light-mode .btn-secondary {
+  background: transparent;
+  border-color: var(--clr-border);
+  color: var(--clr-text);
+}
+
+body.light-mode .hero-status {
+  background: #fff;
+  border-color: var(--clr-border);
+}
+
+body.light-mode .hero-float-card {
+  background: #fff;
+  border-color: var(--clr-border);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+body.light-mode .gradient-text {
+  background: linear-gradient(135deg, var(--clr-accent) 0%, var(--clr-accent-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-mode .pricing-card--featured * {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+body.light-mode .pricing-card--featured h3,
+body.light-mode .pricing-card--featured .price {
+  color: #fff !important;
+}
+
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+  background: var(--clr-surface-2);
+  border-color: var(--clr-border);
+  color: var(--clr-text);
+}
+
+body.light-mode .page-404 .error-code {
+  -webkit-text-stroke: 2px var(--clr-border);
+}
+
+body.light-mode .shadow-sm  { box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+body.light-mode .shadow-md  { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+
+/* ── System Preference: Dark (when JS not loaded) ── */
+@media (prefers-color-scheme: light) {
+  :root:not(.dark-override) {
+    --clr-bg:          #F7F7FA;
+    --clr-surface:     #FFFFFF;
+    --clr-surface-2:   #F0F0F5;
+    --clr-border:      #E0E0EB;
+    --clr-accent:      #6648E8;
+    --clr-accent-2:    #00B396;
+    --clr-accent-glow: rgba(102, 72, 232, 0.15);
+    --clr-text:        #1C1C2E;
+    --clr-text-muted:  #5A5A78;
+    --clr-text-faint:  #A0A0B8;
+    --clr-white:       #1C1C2E;
+  }
+}
+
+/* ── Dark Mode Toggle Button ── */
+.dark-mode-toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background var(--dur-med), border-color var(--dur-med);
+  flex-shrink: 0;
+}
+
+.dark-mode-toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--clr-text-muted);
+  transition: transform var(--dur-med) var(--ease-out), background var(--dur-med);
+}
+
+.dark-mode-toggle.on {
+  background: var(--clr-accent);
+  border-color: var(--clr-accent);
+}
+
+.dark-mode-toggle.on::after {
+  transform: translateX(20px);
+  background: #fff;
+}
+
+/* Icon variant */
+.theme-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--clr-text-muted);
+  transition: all var(--dur-fast);
+}
+
+.theme-icon-btn:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.theme-icon-btn svg { width: 16px; height: 16px; }
+
+/* Sun icon: visible in dark mode */
+.icon-sun  { display: block; }
+.icon-moon { display: none; }
+
+body.light-mode .icon-sun  { display: none; }
+body.light-mode .icon-moon { display: block; }

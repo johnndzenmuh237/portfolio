@@ -1,0 +1,200 @@
+/* ============================================================
+   PORTFOLIO PRO TEMPLATE — themes.css
+   Color theme swatches. Apply to <html> via data-theme="..."
+   Usage:  <html data-theme="ocean">
+   Available: default | ocean | forest | rose | amber | mono
+   ============================================================ */
+
+/* ─────────────────────────────────────────────
+   DEFAULT (Purple / Teal)
+   Defined in style.css :root — no override needed.
+───────────────────────────────────────────── */
+
+/* ─────────────────────────────────────────────
+   OCEAN — Electric Blue / Cyan
+───────────────────────────────────────────── */
+[data-theme="ocean"] {
+  --clr-bg:          #070D18;
+  --clr-surface:     #0D1525;
+  --clr-surface-2:   #111C30;
+  --clr-border:      #1C2E4A;
+  --clr-accent:      #3B82F6;
+  --clr-accent-2:    #06B6D4;
+  --clr-accent-glow: rgba(59, 130, 246, 0.2);
+  --clr-text:        #D8E8F8;
+  --clr-text-muted:  #6888A8;
+  --clr-text-faint:  #2C4060;
+  --clr-white:       #FFFFFF;
+}
+
+[data-theme="ocean"].light-mode {
+  --clr-bg:          #F0F6FF;
+  --clr-surface:     #FFFFFF;
+  --clr-surface-2:   #E8F0FC;
+  --clr-border:      #C8D8F0;
+  --clr-accent:      #2563EB;
+  --clr-accent-2:    #0891B2;
+  --clr-accent-glow: rgba(37, 99, 235, 0.15);
+  --clr-text:        #0F1E36;
+  --clr-text-muted:  #486088;
+  --clr-text-faint:  #90A8C4;
+  --clr-white:       #0F1E36;
+}
+
+/* ─────────────────────────────────────────────
+   FOREST — Emerald / Lime
+───────────────────────────────────────────── */
+[data-theme="forest"] {
+  --clr-bg:          #080F0A;
+  --clr-surface:     #0E1812;
+  --clr-surface-2:   #13201A;
+  --clr-border:      #1E3028;
+  --clr-accent:      #10B981;
+  --clr-accent-2:    #84CC16;
+  --clr-accent-glow: rgba(16, 185, 129, 0.2);
+  --clr-text:        #D4EDE0;
+  --clr-text-muted:  #5A8870;
+  --clr-text-faint:  #243830;
+  --clr-white:       #FFFFFF;
+}
+
+[data-theme="forest"].light-mode {
+  --clr-bg:          #F0FFF8;
+  --clr-surface:     #FFFFFF;
+  --clr-surface-2:   #E4F7EE;
+  --clr-border:      #C0E4D0;
+  --clr-accent:      #059669;
+  --clr-accent-2:    #65A30D;
+  --clr-accent-glow: rgba(5, 150, 105, 0.12);
+  --clr-text:        #0D2E1E;
+  --clr-text-muted:  #3D6E52;
+  --clr-text-faint:  #8CC0A8;
+  --clr-white:       #0D2E1E;
+}
+
+/* ─────────────────────────────────────────────
+   ROSE — Pink / Coral
+───────────────────────────────────────────── */
+[data-theme="rose"] {
+  --clr-bg:          #120810;
+  --clr-surface:     #1C0E1A;
+  --clr-surface-2:   #221422;
+  --clr-border:      #361830;
+  --clr-accent:      #EC4899;
+  --clr-accent-2:    #F97316;
+  --clr-accent-glow: rgba(236, 72, 153, 0.2);
+  --clr-text:        #F0D4E8;
+  --clr-text-muted:  #8C5480;
+  --clr-text-faint:  #3C1C34;
+  --clr-white:       #FFFFFF;
+}
+
+[data-theme="rose"].light-mode {
+  --clr-bg:          #FFF0F8;
+  --clr-surface:     #FFFFFF;
+  --clr-surface-2:   #FCE8F4;
+  --clr-border:      #F0C8E0;
+  --clr-accent:      #DB2777;
+  --clr-accent-2:    #EA580C;
+  --clr-accent-glow: rgba(219, 39, 119, 0.12);
+  --clr-text:        #2E0E26;
+  --clr-text-muted:  #7C3060;
+  --clr-text-faint:  #C890B0;
+  --clr-white:       #2E0E26;
+}
+
+/* ─────────────────────────────────────────────
+   AMBER — Gold / Yellow
+───────────────────────────────────────────── */
+[data-theme="amber"] {
+  --clr-bg:          #0F0A00;
+  --clr-surface:     #1A1200;
+  --clr-surface-2:   #241A00;
+  --clr-border:      #3A2A00;
+  --clr-accent:      #F59E0B;
+  --clr-accent-2:    #EF4444;
+  --clr-accent-glow: rgba(245, 158, 11, 0.2);
+  --clr-text:        #F5E4C0;
+  --clr-text-muted:  #9A7840;
+  --clr-text-faint:  #4A3800;
+  --clr-white:       #FFFFFF;
+}
+
+[data-theme="amber"].light-mode {
+  --clr-bg:          #FFFBF0;
+  --clr-surface:     #FFFFFF;
+  --clr-surface-2:   #FFF4D8;
+  --clr-border:      #F0E0B0;
+  --clr-accent:      #D97706;
+  --clr-accent-2:    #DC2626;
+  --clr-accent-glow: rgba(217, 119, 6, 0.12);
+  --clr-text:        #2E1A00;
+  --clr-text-muted:  #7A5020;
+  --clr-text-faint:  #C0A060;
+  --clr-white:       #2E1A00;
+}
+
+/* ─────────────────────────────────────────────
+   MONO — Pure Grayscale
+───────────────────────────────────────────── */
+[data-theme="mono"] {
+  --clr-bg:          #080808;
+  --clr-surface:     #111111;
+  --clr-surface-2:   #1A1A1A;
+  --clr-border:      #262626;
+  --clr-accent:      #E0E0E0;
+  --clr-accent-2:    #888888;
+  --clr-accent-glow: rgba(224, 224, 224, 0.1);
+  --clr-text:        #D0D0D0;
+  --clr-text-muted:  #707070;
+  --clr-text-faint:  #303030;
+  --clr-white:       #FFFFFF;
+}
+
+[data-theme="mono"].light-mode {
+  --clr-bg:          #F8F8F8;
+  --clr-surface:     #FFFFFF;
+  --clr-surface-2:   #F0F0F0;
+  --clr-border:      #D8D8D8;
+  --clr-accent:      #1A1A1A;
+  --clr-accent-2:    #666666;
+  --clr-accent-glow: rgba(26, 26, 26, 0.08);
+  --clr-text:        #1A1A1A;
+  --clr-text-muted:  #505050;
+  --clr-text-faint:  #A0A0A0;
+  --clr-white:       #1A1A1A;
+}
+
+/* ─────────────────────────────────────────────
+   Theme Switcher Widget (optional UI)
+───────────────────────────────────────────── */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+}
+
+.theme-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.theme-swatch:hover { transform: scale(1.2); }
+
+.theme-swatch.active { border-color: var(--clr-text); }
+
+.theme-swatch[data-theme-value="default"] { background: linear-gradient(135deg, #7B5EF6, #5BE8C8); }
+.theme-swatch[data-theme-value="ocean"]   { background: linear-gradient(135deg, #3B82F6, #06B6D4); }
+.theme-swatch[data-theme-value="forest"]  { background: linear-gradient(135deg, #10B981, #84CC16); }
+.theme-swatch[data-theme-value="rose"]    { background: linear-gradient(135deg, #EC4899, #F97316); }
+.theme-swatch[data-theme-value="amber"]   { background: linear-gradient(135deg, #F59E0B, #EF4444); }
+.theme-swatch[data-theme-value="mono"]    { background: linear-gradient(135deg, #444, #999); }

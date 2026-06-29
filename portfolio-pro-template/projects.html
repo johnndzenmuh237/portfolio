@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0C0C0F" />
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/themes.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <meta name="description" content="Explore [Your Name]'s portfolio of web design, branding, mobile, and motion projects." />
+  <title>Work — [Your Name] | Portfolio</title>
+</head>
+<body>
+  <div id="preloader" aria-hidden="true"><div class="preloader-inner"><div class="preloader-logo">[YN]<span style="color:var(--clr-accent)">.</span></div><div class="preloader-bar-wrap"><div class="preloader-bar"></div></div></div></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <header id="navbar" role="banner"><div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Home"><img src="assets/images/logo/logo.svg" alt="Logo" onerror="this.style.display='none'" />[YN]<span class="logo-dot"></span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-icon-btn" aria-label="Toggle dark mode" data-darkmode-toggle>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary">Hire Me</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div></header>
+  <nav class="nav-mobile" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Work</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn-primary mt-4">Hire Me</a></nav>
+  <main id="main-content">
+    <section class="page-header"><div class="container page-header-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Work</span></div>
+      <h1 data-animate="fade-up">My Work</h1>
+      <p data-animate="fade-up" data-delay="100">A curated portfolio across design, development, and branding.</p>
+    </div></section>
+    <section class="section"><div class="container">
+      <div class="portfolio-filters" role="group" aria-label="Filter projects" data-animate="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="motion">Motion</button>
+        <button class="filter-btn" data-filter="photography">Photography</button>
+      </div>
+      <div class="projects-grid" data-stagger>
+        <article class="project-card" data-category="web, branding">
+          <div class="project-image"><img src="assets/images/projects/project-1.jpg" alt="Luminary SaaS Dashboard" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge badge-accent">Luminary</span><span class="badge">SaaS</span></div><h3><a href="project-single.html">Luminary SaaS Dashboard</a></h3><p>Data-dense analytics dashboard focused on clarity and conversion.</p></div>
+        </article>
+        <article class="project-card" data-category="branding">
+          <div class="project-image"><img src="assets/images/projects/project-2.jpg" alt="Nova Brand Identity" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge badge-teal">Nova</span><span class="badge">Identity</span></div><h3><a href="project-single.html">Nova Brand Identity</a></h3><p>Complete visual identity system for a fast-growing tech startup.</p></div>
+        </article>
+        <article class="project-card" data-category="mobile">
+          <div class="project-image"><img src="assets/images/projects/project-3.jpg" alt="Pulse Health App" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge badge-accent">Pulse</span><span class="badge">Health</span></div><h3><a href="project-single.html">Pulse Health App</a></h3><p>iOS health tracking app designed from wireframe to prototype.</p></div>
+        </article>
+        <article class="project-card" data-category="web">
+          <div class="project-image"><img src="assets/images/projects/project-4.jpg" alt="Orbit E-Commerce" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge badge-accent">Orbit</span><span class="badge">Shopify</span></div><h3><a href="project-single.html">Orbit E-Commerce</a></h3><p>Premium Shopify store for a luxury goods brand.</p></div>
+        </article>
+        <article class="project-card" data-category="motion">
+          <div class="project-image"><img src="assets/images/projects/project-5.jpg" alt="Kinetic Motion Reel" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge badge-teal">Kinetic</span><span class="badge">After Effects</span></div><h3><a href="project-single.html">Kinetic Motion Reel</a></h3><p>UI micro-animations and brand motion sequences.</p></div>
+        </article>
+        <article class="project-card" data-category="web, branding">
+          <div class="project-image"><img src="assets/images/projects/project-6.jpg" alt="Verdant Agency Site" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge badge-accent">Verdant</span><span class="badge">Agency</span></div><h3><a href="project-single.html">Verdant Agency Site</a></h3><p>Award-winning agency site with scroll animations.</p></div>
+        </article>
+        <article class="project-card" data-category="photography">
+          <div class="project-image"><img src="assets/images/projects/project-7.jpg" alt="Solstice Editorial" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge ">Solstice</span><span class="badge">Editorial</span></div><h3><a href="project-single.html">Solstice Editorial</a></h3><p>Art direction and photography for a lifestyle campaign.</p></div>
+        </article>
+        <article class="project-card" data-category="mobile, branding">
+          <div class="project-image"><img src="assets/images/projects/project-8.jpg" alt="Zephyr Finance App" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge badge-accent">Zephyr</span><span class="badge">Fintech</span></div><h3><a href="project-single.html">Zephyr Finance App</a></h3><p>Personal finance app with intuitive dashboards.</p></div>
+        </article>
+        <article class="project-card" data-category="web">
+          <div class="project-image"><img src="assets/images/projects/project-9.jpg" alt="Cascade CMS Platform" width="600" height="375" loading="lazy" /><div class="project-image-overlay"><a href="project-single.html" class="project-link-btn" aria-label="View project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div></div>
+          <div class="project-meta"><div class="project-tags"><span class="badge badge-accent">Cascade</span><span class="badge">React</span></div><h3><a href="project-single.html">Cascade CMS Platform</a></h3><p>Full-featured CMS with drag-and-drop editor.</p></div>
+        </article>
+      </div>
+      <div class="text-center mt-8" data-animate="fade-up"><button id="load-more-btn" class="btn btn-secondary">Load More</button></div>
+    </div></section>
+    <section class="cta-section"><div class="container"><div class="cta-box" data-animate="fade-scale">
+      <h2>Have a project in mind?</h2>
+      <p>Let's create something amazing together.</p>
+      <div class="btn-group" style="justify-content:center;"><a href="contact.html" class="btn btn-primary">Start a Project</a></div>
+    </div></div></section>
+  </main>
+  <footer role="contentinfo"><div class="container">
+    <div class="footer-main">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:.5rem;">[YN]<span class="logo-dot"></span></a><p>Crafting purposeful digital experiences for brands that dare to stand out.</p></div>
+      <div class="footer-col"><h4>Navigation</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="services.html">UI/UX Design</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Brand Identity</a></li><li><a href="services.html">Motion Design</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li><li><a href="#">[Your City, Country]</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; <span id="footer-year"></span> [Your Name]. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a></div></div>
+  </div></footer>
+  <button id="back-to-top" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <div id="cookie-banner" role="dialog" aria-live="polite"><p>This site uses cookies. <a href="#" style="color:var(--clr-accent)">Learn more</a></p><div class="cookie-actions"><button id="cookie-accept" class="btn btn-primary" style="padding:10px 20px;">Accept</button><button id="cookie-reject" class="btn btn-secondary" style="padding:10px 20px;">Decline</button></div></div>
+  <script src="assets/js/darkmode.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio-filter.js"></script>
+  <script src="assets/js/slider.js"></script>
+  <script src="assets/js/contact-form.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

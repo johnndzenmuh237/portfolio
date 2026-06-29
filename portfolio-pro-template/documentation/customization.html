@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customization Guide — Portfolio Pro Template</title>
+  <style>
+    :root {
+      --bg:#0C0C0F;--surface:#131317;--border:#242430;--accent:#7B5EF6;
+      --accent2:#5BE8C8;--text:#E8E8F0;--muted:#7A7A90;--white:#fff;
+      --mono:'JetBrains Mono','Fira Code',monospace;--sans:'Inter',system-ui,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;}
+    a{color:var(--accent);}
+    .layout{display:flex;min-height:100vh;}
+    .sidebar{width:260px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);padding:2rem 1.5rem;position:sticky;top:0;height:100vh;overflow-y:auto;}
+    .sidebar-logo{font-size:1.25rem;font-weight:800;color:var(--white);margin-bottom:2rem;letter-spacing:-.02em;}
+    .sidebar-logo span{color:var(--accent);}
+    .sidebar-section{margin-bottom:1.5rem;}
+    .sidebar-section h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.75rem;font-family:var(--mono);}
+    .sidebar-section a{display:block;font-size:.875rem;color:var(--muted);padding:.35rem 0;text-decoration:none;transition:color .2s;border-left:2px solid transparent;padding-left:.75rem;margin-left:-.75rem;}
+    .sidebar-section a:hover,.sidebar-section a.active{color:var(--accent);border-left-color:var(--accent);}
+    .content{flex:1;padding:3rem 4rem;max-width:900px;}
+    h1{font-size:2.5rem;font-weight:800;color:var(--white);margin-bottom:1rem;letter-spacing:-.03em;}
+    h2{font-size:1.5rem;font-weight:700;color:var(--white);margin:3rem 0 1rem;padding-top:2rem;border-top:1px solid var(--border);}
+    h3{font-size:1.125rem;font-weight:600;color:var(--white);margin:2rem 0 .5rem;}
+    p{color:var(--muted);margin-bottom:1rem;}
+    ul,ol{color:var(--muted);padding-left:1.5rem;margin-bottom:1rem;}
+    li{margin-bottom:.5rem;}
+    code{font-family:var(--mono);font-size:.875rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2px 6px;color:var(--accent2);}
+    pre{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;overflow-x:auto;margin:1.5rem 0;}
+    pre code{background:none;border:none;padding:0;color:var(--accent2);font-size:.8125rem;line-height:1.8;}
+    .callout{border-left:3px solid var(--accent);background:rgba(123,94,246,.06);border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.5rem 0;}
+    .callout p{margin:0;}
+    .callout.tip{border-color:var(--accent2);background:rgba(91,232,200,.06);}
+    .swatch-row{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0;}
+    .swatch{width:48px;height:48px;border-radius:10px;border:2px solid var(--border);position:relative;cursor:pointer;}
+    .swatch span{position:absolute;bottom:-1.4rem;left:50%;transform:translateX(-50%);font-size:.65rem;font-family:var(--mono);color:var(--muted);white-space:nowrap;}
+    table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
+    th{background:var(--surface);color:var(--white);padding:.75rem 1rem;text-align:left;border:1px solid var(--border);}
+    td{padding:.75rem 1rem;border:1px solid var(--border);color:var(--muted);}
+    tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+    @media(max-width:768px){.sidebar{display:none;}.content{padding:2rem 1.5rem;}}
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">Portfolio<span>Pro</span></div>
+    <div class="sidebar-section">
+      <h4>Documentation</h4>
+      <a href="installation.html">Installation</a>
+      <a href="customization.html" class="active">Customization</a>
+      <a href="assets-guide.html">Assets Guide</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>On This Page</h4>
+      <a href="#colors">Colors</a>
+      <a href="#fonts">Fonts</a>
+      <a href="#themes">Color Themes</a>
+      <a href="#dark-mode">Dark/Light Mode</a>
+      <a href="#animations">Animations</a>
+      <a href="#layout">Layout &amp; Spacing</a>
+      <a href="#nav">Navigation</a>
+      <a href="#sections">Adding Sections</a>
+      <a href="#scripts">JavaScript Config</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>Resources</h4>
+      <a href="../index.html">← Back to Template</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <p style="font-family:var(--mono);font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">Documentation</p>
+    <h1>Customization Guide</h1>
+    <p style="font-size:1.125rem;">Everything is customizable through CSS variables, HTML attributes, and a few lines of JavaScript. No framework knowledge required.</p>
+
+    <!-- ── COLORS ── -->
+    <h2 id="colors">Colors</h2>
+    <p>All colors are defined as CSS custom properties in the <code>:root</code> block of <code>assets/css/style.css</code>. Change them once and the entire template updates.</p>
+
+    <pre><code>/* assets/css/style.css — :root */
+:root {
+  /* Backgrounds */
+  --clr-bg:          #0C0C0F;   /* Main page background */
+  --clr-surface:     #131317;   /* Cards, sidebar */
+  --clr-surface-2:   #1A1A20;   /* Input fields, code blocks */
+  --clr-border:      #242430;   /* All borders and dividers */
+
+  /* Brand Colors — CHANGE THESE */
+  --clr-accent:      #7B5EF6;   /* Primary: buttons, links, highlights */
+  --clr-accent-2:    #5BE8C8;   /* Secondary: gradients, badges */
+  --clr-accent-glow: rgba(123, 94, 246, 0.25); /* Glow shadow — match accent */
+
+  /* Text */
+  --clr-text:        #E8E8F0;   /* Body text */
+  --clr-text-muted:  #7A7A90;   /* Secondary text, descriptions */
+  --clr-text-faint:  #3E3E52;   /* Labels, timestamps */
+  --clr-white:       #FFFFFF;   /* Headings */
+}</code></pre>
+
+    <h3>Swap to a different accent color</h3>
+    <p>To change the primary brand color, update <code>--clr-accent</code> and its corresponding glow:</p>
+    <pre><code>/* Example: Electric Blue brand */
+--clr-accent:      #3B82F6;
+--clr-accent-2:    #06B6D4;
+--clr-accent-glow: rgba(59, 130, 246, 0.25);</code></pre>
+
+    <div class="swatch-row">
+      <div class="swatch" style="background:#7B5EF6;"><span>Purple</span></div>
+      <div class="swatch" style="background:#3B82F6;"><span>Blue</span></div>
+      <div class="swatch" style="background:#10B981;"><span>Emerald</span></div>
+      <div class="swatch" style="background:#EC4899;"><span>Rose</span></div>
+      <div class="swatch" style="background:#F59E0B;"><span>Amber</span></div>
+      <div class="swatch" style="background:#EF4444;"><span>Red</span></div>
+    </div>
+    <br />
+
+    <!-- ── FONTS ── -->
+    <h2 id="fonts">Fonts</h2>
+    <p>The template uses three typefaces, all from Google Fonts:</p>
+    <table>
+      <thead><tr><th>Variable</th><th>Default Font</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td><code>--font-display</code></td><td>Syne</td><td>All headings (h1–h6), logo, stats</td></tr>
+        <tr><td><code>--font-body</code></td><td>Inter</td><td>All body text, paragraphs, buttons</td></tr>
+        <tr><td><code>--font-mono</code></td><td>JetBrains Mono</td><td>Eyebrows, labels, code, badges</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Change the display font</h3>
+    <p>1. Update the Google Fonts <code>&lt;link&gt;</code> in each HTML file's <code>&lt;head&gt;</code>:</p>
+    <pre><code>&lt;!-- Replace Syne with Playfair Display --&gt;
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?
+  family=Playfair+Display:wght@400;700;800&amp;
+  family=Inter:wght@300;400;500;600&amp;
+  family=JetBrains+Mono:wght@400;500&amp;display=swap" /&gt;</code></pre>
+    <p>2. Update the variable in <code>style.css</code>:</p>
+    <pre><code>--font-display: 'Playfair Display', serif;</code></pre>
+
+    <h3>Self-hosting fonts</h3>
+    <p>For GDPR compliance or performance, place font files in <code>assets/fonts/</code> and use <code>@font-face</code> in <code>style.css</code> instead of the Google Fonts import:</p>
+    <pre><code>/* Remove the Google Fonts @import at the top of style.css, then add: */
+@font-face {
+  font-family: 'Syne';
+  src: url('../fonts/Syne-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}</code></pre>
+
+    <!-- ── THEMES ── -->
+    <h2 id="themes">Built-in Color Themes</h2>
+    <p>The template ships with 6 complete color themes defined in <code>assets/css/themes.css</code>. Apply one by setting the <code>data-theme</code> attribute on the <code>&lt;html&gt;</code> element:</p>
+    <pre><code>&lt;!-- index.html, about.html, etc. --&gt;
+&lt;html lang="en" data-theme="ocean"&gt;</code></pre>
+    <table>
+      <thead><tr><th>Theme</th><th>Value</th><th>Colors</th></tr></thead>
+      <tbody>
+        <tr><td>Default</td><td><code>default</code></td><td>Purple / Teal</td></tr>
+        <tr><td>Ocean</td><td><code>ocean</code></td><td>Electric Blue / Cyan</td></tr>
+        <tr><td>Forest</td><td><code>forest</code></td><td>Emerald / Lime</td></tr>
+        <tr><td>Rose</td><td><code>rose</code></td><td>Pink / Coral</td></tr>
+        <tr><td>Amber</td><td><code>amber</code></td><td>Gold / Red</td></tr>
+        <tr><td>Mono</td><td><code>mono</code></td><td>Pure Grayscale</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Adding a Theme Switcher Widget</h3>
+    <p>Add this HTML anywhere in your page to show a visual swatch picker. The JS in <code>darkmode.js</code> handles it automatically:</p>
+    <pre><code>&lt;div class="theme-switcher"&gt;
+  &lt;button class="theme-swatch active" data-theme-value="default" aria-label="Default theme"&gt;&lt;/button&gt;
+  &lt;button class="theme-swatch" data-theme-value="ocean"   aria-label="Ocean theme"&gt;&lt;/button&gt;
+  &lt;button class="theme-swatch" data-theme-value="forest"  aria-label="Forest theme"&gt;&lt;/button&gt;
+  &lt;button class="theme-swatch" data-theme-value="rose"    aria-label="Rose theme"&gt;&lt;/button&gt;
+  &lt;button class="theme-swatch" data-theme-value="amber"   aria-label="Amber theme"&gt;&lt;/button&gt;
+  &lt;button class="theme-swatch" data-theme-value="mono"    aria-label="Mono theme"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+    <h3>Creating a Custom Theme</h3>
+    <p>Add a new block to <code>themes.css</code> following the same pattern:</p>
+    <pre><code>/* themes.css — add your own */
+[data-theme="midnight"] {
+  --clr-bg:          #0A0014;
+  --clr-surface:     #120022;
+  --clr-surface-2:   #1A0030;
+  --clr-border:      #2C0050;
+  --clr-accent:      #A855F7;
+  --clr-accent-2:    #F0ABFC;
+  --clr-accent-glow: rgba(168, 85, 247, 0.25);
+  --clr-text:        #EDE9FE;
+  --clr-text-muted:  #8B5CF6;
+  --clr-text-faint:  #4C1D95;
+  --clr-white:       #FFFFFF;
+}</code></pre>
+
+    <!-- ── DARK MODE ── -->
+    <h2 id="dark-mode">Dark / Light Mode</h2>
+    <p>The default mode is <strong>dark</strong>. Light mode is applied when <code>body</code> has the class <code>light-mode</code>. The toggle in the navbar handles this automatically and persists via <code>localStorage</code>.</p>
+
+    <h3>Default to light mode</h3>
+    <p>To make light mode the default, add the class to <code>&lt;body&gt;</code> in every HTML file:</p>
+    <pre><code>&lt;body class="light-mode"&gt;</code></pre>
+
+    <h3>Disable dark mode toggle</h3>
+    <p>Remove the toggle button from the navbar in each HTML file and comment out <code>darkmode.js</code> in the script tags. The site will stay in whatever mode <code>&lt;body&gt;</code> starts in.</p>
+
+    <h3>Customise light mode colours</h3>
+    <p>Light mode overrides live in <code>assets/css/dark-mode.css</code> under the <code>body.light-mode</code> selector:</p>
+    <pre><code>/* dark-mode.css */
+body.light-mode {
+  --clr-bg:         #F7F7FA;
+  --clr-surface:    #FFFFFF;
+  --clr-accent:     #6648E8;  /* Slightly darker for contrast on white */
+  /* ... */
+}</code></pre>
+
+    <!-- ── ANIMATIONS ── -->
+    <h2 id="animations">Animations</h2>
+    <p>Animations are powered by <code>IntersectionObserver</code> — no GSAP or external library needed. Any element with a <code>data-animate</code> attribute will animate in when it enters the viewport.</p>
+
+    <h3>Animation variants</h3>
+    <table>
+      <thead><tr><th>Attribute</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td><code>data-animate="fade-up"</code></td><td>Fade in from below (most common)</td></tr>
+        <tr><td><code>data-animate="fade-down"</code></td><td>Fade in from above</td></tr>
+        <tr><td><code>data-animate="fade-left"</code></td><td>Slide in from left</td></tr>
+        <tr><td><code>data-animate="fade-right"</code></td><td>Slide in from right</td></tr>
+        <tr><td><code>data-animate="fade-scale"</code></td><td>Scale up from 92%</td></tr>
+        <tr><td><code>data-animate="fade"</code></td><td>Opacity only, no transform</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Stagger children</h3>
+    <p>Add <code>data-stagger</code> to a parent element to automatically stagger the entrance animation of all direct children:</p>
+    <pre><code>&lt;div class="grid-3" data-stagger&gt;
+  &lt;div class="card"&gt;...&lt;/div&gt;
+  &lt;div class="card"&gt;...&lt;/div&gt;  &lt;!-- 80ms delay --&gt;
+  &lt;div class="card"&gt;...&lt;/div&gt;  &lt;!-- 160ms delay --&gt;
+&lt;/div&gt;</code></pre>
+
+    <h3>Delay individual elements</h3>
+    <pre><code>&lt;h2 data-animate="fade-up"&gt;Title&lt;/h2&gt;
+&lt;p  data-animate="fade-up" data-delay="200"&gt;Subtitle&lt;/p&gt;
+&lt;div data-animate="fade-up" data-delay="400"&gt;Buttons&lt;/div&gt;</code></pre>
+
+    <h3>Disable all animations</h3>
+    <p>Remove <code>animations.css</code> from the <code>&lt;head&gt;</code> of each HTML file. The <code>prefers-reduced-motion</code> media query already disables animations automatically for users who have enabled that OS setting.</p>
+
+    <!-- ── LAYOUT ── -->
+    <h2 id="layout">Layout &amp; Spacing</h2>
+    <p>All spacing, max-widths, and border radii are tokenised in <code>style.css</code>:</p>
+    <pre><code>/* Spacing scale */
+--sp-1: 0.25rem;  --sp-2: 0.5rem;   --sp-3: 0.75rem;
+--sp-4: 1rem;     --sp-6: 1.5rem;   --sp-8: 2rem;
+--sp-10: 2.5rem;  --sp-12: 3rem;    --sp-16: 4rem;
+--sp-20: 5rem;    --sp-24: 6rem;    --sp-32: 8rem;
+
+/* Max widths */
+--max-w:    1200px;   /* Default container */
+--max-w-sm:  760px;   /* Narrow container (.container--sm) */
+
+/* Border radius */
+--radius-sm: 6px;   --radius-md: 12px;
+--radius-lg: 20px;  --radius-xl: 32px;
+--radius-full: 9999px;</code></pre>
+
+    <h3>Section spacing</h3>
+    <p>Use the <code>.section</code> class for standard vertical padding, or <code>.section--sm</code> for tighter spacing:</p>
+    <pre><code>&lt;section class="section"&gt;...&lt;/section&gt;      &lt;!-- 8rem top/bottom --&gt;
+&lt;section class="section--sm"&gt;...&lt;/section&gt;  &lt;!-- 5rem top/bottom --&gt;</code></pre>
+
+    <!-- ── NAVIGATION ── -->
+    <h2 id="nav">Navigation</h2>
+    <h3>Adding / removing nav links</h3>
+    <p>Edit the <code>.nav-links</code> and <code>.nav-mobile</code> sections in every HTML file. Remember to set the <code>class="active"</code> on the correct link for the current page:</p>
+    <pre><code>&lt;nav class="nav-links"&gt;
+  &lt;a href="index.html" class="active"&gt;Home&lt;/a&gt;
+  &lt;a href="about.html"&gt;About&lt;/a&gt;
+  &lt;a href="projects.html"&gt;Work&lt;/a&gt;
+  &lt;a href="services.html"&gt;Services&lt;/a&gt;
+  &lt;a href="blog.html"&gt;Blog&lt;/a&gt;
+  &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+  &lt;!-- Add more links here --&gt;
+&lt;/nav&gt;</code></pre>
+
+    <!-- ── SECTIONS ── -->
+    <h2 id="sections">Adding New Sections</h2>
+    <p>To add a new section, copy this boilerplate and paste it between existing sections in any HTML file:</p>
+    <pre><code>&lt;section class="section" id="your-section-id" aria-labelledby="your-heading-id"&gt;
+  &lt;div class="container"&gt;
+
+    &lt;!-- Optional: Section Header --&gt;
+    &lt;div class="section-header" data-animate="fade-up"&gt;
+      &lt;div class="eyebrow"&gt;Category Label&lt;/div&gt;
+      &lt;h2 id="your-heading-id"&gt;Section Title&lt;/h2&gt;
+      &lt;p&gt;Optional subtitle or description text.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Your content here --&gt;
+    &lt;div class="grid-3" data-stagger&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h3&gt;Card Title&lt;/h3&gt;
+          &lt;p&gt;Card description.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+    <!-- ── JS CONFIG ── -->
+    <h2 id="scripts">JavaScript Configuration</h2>
+    <h3>Counter animation</h3>
+    <p>Any element with <code>data-count</code> will animate its number when scrolled into view:</p>
+    <pre><code>&lt;span data-count="120" data-suffix="+" data-duration="1800"&gt;120+&lt;/span&gt;
+&lt;!-- data-count    = target number           --&gt;
+&lt;!-- data-suffix   = appended string (e.g. +, %, K) --&gt;
+&lt;!-- data-prefix   = prepended string (e.g. $) --&gt;
+&lt;!-- data-decimals = decimal places (default 0) --&gt;
+&lt;!-- data-duration = animation duration in ms  --&gt;</code></pre>
+
+    <h3>Typed / rotating text</h3>
+    <pre><code>&lt;strong data-typed="UI/UX Designer,Web Developer,Brand Strategist"&gt;
+  UI/UX Designer
+&lt;/strong&gt;</code></pre>
+
+    <h3>Skill bars</h3>
+    <pre><code>&lt;div class="skill-bar"&gt;
+  &lt;div class="skill-bar-fill" data-pct="85"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- data-pct = percentage (0–100). Animates on scroll. --&gt;</code></pre>
+
+    <h3>Portfolio filter</h3>
+    <p>Add <code>data-category="web, branding"</code> (comma-separated) to any <code>.project-card</code>. Filter buttons should have matching <code>data-filter="web"</code> values. The "all" filter always shows everything.</p>
+
+    <h3>Lightbox</h3>
+    <pre><code>&lt;a href="assets/images/projects/project-1-full.jpg"
+   data-lightbox="assets/images/projects/project-1-full.jpg"
+   data-caption="Optional caption text"&gt;
+  &lt;img src="assets/images/projects/project-1.jpg" alt="..." /&gt;
+&lt;/a&gt;</code></pre>
+
+    <h3>Parallax</h3>
+    <pre><code>&lt;div data-parallax="0.3"&gt;
+  &lt;!-- Moves at 30% of scroll speed. Use values 0.1–0.5 for subtle effect. --&gt;
+&lt;/div&gt;</code></pre>
+
+    <h3>Contact form endpoint</h3>
+    <pre><code>&lt;!-- Formspree --&gt;
+&lt;form id="contact-form" data-endpoint="https://formspree.io/f/XXXXXXXX"&gt;
+
+&lt;!-- Netlify --&gt;
+&lt;form id="contact-form" name="contact" netlify data-netlify="true"&gt;
+
+&lt;!-- Custom backend (POST JSON) --&gt;
+&lt;form id="contact-form" data-endpoint="https://api.yourdomain.com/contact"&gt;</code></pre>
+
+    <div class="callout tip">
+      <p><strong>Tip:</strong> All JavaScript is vanilla ES6 with no dependencies. You can open any .js file, read it top-to-bottom, and understand exactly what it does. Well-commented throughout.</p>
+    </div>
+  </main>
+</div>
+</body>
+</html>

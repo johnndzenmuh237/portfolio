@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assets Guide — Portfolio Pro Template</title>
+  <style>
+    :root{--bg:#0C0C0F;--surface:#131317;--border:#242430;--accent:#7B5EF6;--accent2:#5BE8C8;--text:#E8E8F0;--muted:#7A7A90;--white:#fff;--mono:'JetBrains Mono','Fira Code',monospace;--sans:'Inter',system-ui,sans-serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;}
+    a{color:var(--accent);}
+    .layout{display:flex;min-height:100vh;}
+    .sidebar{width:260px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);padding:2rem 1.5rem;position:sticky;top:0;height:100vh;overflow-y:auto;}
+    .sidebar-logo{font-size:1.25rem;font-weight:800;color:var(--white);margin-bottom:2rem;letter-spacing:-.02em;}
+    .sidebar-logo span{color:var(--accent);}
+    .sidebar-section{margin-bottom:1.5rem;}
+    .sidebar-section h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.75rem;font-family:var(--mono);}
+    .sidebar-section a{display:block;font-size:.875rem;color:var(--muted);padding:.35rem 0;text-decoration:none;transition:color .2s;border-left:2px solid transparent;padding-left:.75rem;margin-left:-.75rem;}
+    .sidebar-section a:hover,.sidebar-section a.active{color:var(--accent);border-left-color:var(--accent);}
+    .content{flex:1;padding:3rem 4rem;max-width:900px;}
+    h1{font-size:2.5rem;font-weight:800;color:var(--white);margin-bottom:1rem;letter-spacing:-.03em;}
+    h2{font-size:1.5rem;font-weight:700;color:var(--white);margin:3rem 0 1rem;padding-top:2rem;border-top:1px solid var(--border);}
+    h3{font-size:1.125rem;font-weight:600;color:var(--white);margin:1.5rem 0 .5rem;}
+    p{color:var(--muted);margin-bottom:1rem;}
+    ul,ol{color:var(--muted);padding-left:1.5rem;margin-bottom:1rem;}
+    li{margin-bottom:.5rem;}
+    code{font-family:var(--mono);font-size:.875rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2px 6px;color:var(--accent2);}
+    pre{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;overflow-x:auto;margin:1.5rem 0;}
+    pre code{background:none;border:none;padding:0;color:var(--accent2);font-size:.8125rem;line-height:1.8;}
+    .callout{border-left:3px solid var(--accent);background:rgba(123,94,246,.06);border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.5rem 0;}
+    .callout p{margin:0;}
+    .callout.tip{border-color:var(--accent2);background:rgba(91,232,200,.06);}
+    .callout.warn{border-color:#f59e0b;background:rgba(245,158,11,.06);}
+    table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
+    th{background:var(--surface);color:var(--white);padding:.75rem 1rem;text-align:left;border:1px solid var(--border);}
+    td{padding:.75rem 1rem;border:1px solid var(--border);color:var(--muted);vertical-align:top;}
+    tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+    .file-tree{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;font-family:var(--mono);font-size:.8125rem;color:var(--muted);line-height:2;}
+    .file-tree .dir{color:var(--white);}
+    .file-tree .file{color:var(--accent2);}
+    .file-tree .comment{color:var(--border);}
+    @media(max-width:768px){.sidebar{display:none;}.content{padding:2rem 1.5rem;}}
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">Portfolio<span>Pro</span></div>
+    <div class="sidebar-section">
+      <h4>Documentation</h4>
+      <a href="installation.html">Installation</a>
+      <a href="customization.html">Customization</a>
+      <a href="assets-guide.html" class="active">Assets Guide</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>On This Page</h4>
+      <a href="#overview">Overview</a>
+      <a href="#logo">Logo &amp; Favicon</a>
+      <a href="#hero">Hero Images</a>
+      <a href="#projects">Project Images</a>
+      <a href="#testimonials">Testimonial Avatars</a>
+      <a href="#blog">Blog Images</a>
+      <a href="#clients">Client Logos</a>
+      <a href="#og">Open Graph Image</a>
+      <a href="#optimization">Optimization Tips</a>
+      <a href="#formats">Formats &amp; Compression</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>Resources</h4>
+      <a href="../index.html">← Back to Template</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <p style="font-family:var(--mono);font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">Documentation</p>
+    <h1>Assets Guide</h1>
+    <p style="font-size:1.125rem;">A complete reference for every image and asset the template expects — filenames, dimensions, formats, and optimization best practices.</p>
+
+    <!-- ── OVERVIEW ── -->
+    <h2 id="overview">Directory Overview</h2>
+    <div class="file-tree">
+      <span class="dir">assets/images/</span><br/>
+      <span style="padding-left:1.5rem;" class="dir">logo/</span><br/>
+      <span style="padding-left:3rem;" class="file">logo.svg</span>   <span class="comment"># Primary logo (navbar, footer)</span><br/>
+      <span style="padding-left:3rem;" class="file">logo-light.svg</span> <span class="comment"># Optional: alternate for light mode</span><br/>
+      <span style="padding-left:3rem;" class="file">favicon.png</span> <span class="comment"># 32×32px or 64×64px PNG</span><br/>
+      <span style="padding-left:3rem;" class="file">favicon.svg</span> <span class="comment"># Vector favicon (modern browsers)</span><br/>
+      <span style="padding-left:3rem;" class="file">apple-touch-icon.png</span> <span class="comment"># 180×180px</span><br/>
+      <br/>
+      <span style="padding-left:1.5rem;" class="dir">hero/</span><br/>
+      <span style="padding-left:3rem;" class="file">hero-photo.jpg</span>   <span class="comment"># Hero section portrait</span><br/>
+      <span style="padding-left:3rem;" class="file">about-photo.jpg</span>  <span class="comment"># About page portrait</span><br/>
+      <br/>
+      <span style="padding-left:1.5rem;" class="dir">projects/</span><br/>
+      <span style="padding-left:3rem;" class="file">project-1.jpg</span>         <span class="comment"># Thumbnail (16:10)</span><br/>
+      <span style="padding-left:3rem;" class="file">project-1-hero.jpg</span>    <span class="comment"># Case study hero (wide)</span><br/>
+      <span style="padding-left:3rem;" class="file">project-1-screen-1.jpg</span> <span class="comment"># Gallery image</span><br/>
+      <span style="padding-left:3rem;" class="file">…</span><br/>
+      <span style="padding-left:3rem;" class="file">project-9.jpg</span><br/>
+      <br/>
+      <span style="padding-left:1.5rem;" class="dir">testimonials/</span><br/>
+      <span style="padding-left:3rem;" class="file">client-1.jpg</span> <span class="comment"># Avatar (square)</span><br/>
+      <span style="padding-left:3rem;" class="file">…</span><br/>
+      <span style="padding-left:3rem;" class="file">client-6.jpg</span><br/>
+      <br/>
+      <span style="padding-left:1.5rem;" class="dir">blog/</span><br/>
+      <span style="padding-left:3rem;" class="file">blog-1.jpg</span> <span class="comment"># Blog card thumbnail (16:9)</span><br/>
+      <span style="padding-left:3rem;" class="file">…</span><br/>
+      <span style="padding-left:3rem;" class="file">blog-6.jpg</span><br/>
+      <br/>
+      <span style="padding-left:1.5rem;" class="dir">clients/</span><br/>
+      <span style="padding-left:3rem;" class="file">client-logo-1.png</span> <span class="comment"># Transparent PNG logos</span><br/>
+      <span style="padding-left:3rem;" class="file">…</span><br/>
+      <br/>
+      <span style="padding-left:1.5rem;" class="file">og-image.jpg</span> <span class="comment"># Social sharing preview (1200×630)</span><br/>
+    </div>
+
+    <!-- ── LOGO ── -->
+    <h2 id="logo">Logo &amp; Favicon</h2>
+    <table>
+      <thead><tr><th>File</th><th>Format</th><th>Size</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><code>logo.svg</code></td><td>SVG</td><td>Any</td><td>Used in navbar and footer. Keep under 10 KB. Transparent background.</td></tr>
+        <tr><td><code>logo-light.svg</code></td><td>SVG</td><td>Any</td><td>Optional. If your logo needs to change for light mode, reference this in the CSS dark-mode overrides.</td></tr>
+        <tr><td><code>favicon.png</code></td><td>PNG</td><td>64×64px</td><td>Fallback favicon for older browsers.</td></tr>
+        <tr><td><code>favicon.svg</code></td><td>SVG</td><td>Any</td><td>Vector favicon used by modern browsers. Can contain <code>&lt;style&gt;</code> for dark/light variants.</td></tr>
+        <tr><td><code>apple-touch-icon.png</code></td><td>PNG</td><td>180×180px</td><td>Used when users add your site to their iOS home screen. Add to <code>&lt;head&gt;</code>: <code>&lt;link rel="apple-touch-icon" href="..."&gt;</code></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <p><strong>SVG Logo Tip:</strong> Make sure your SVG logo uses <code>currentColor</code> or defines its fill/stroke as <code>#FFFFFF</code> so it shows up correctly on dark backgrounds. If you have a colorful logo, use a PNG with transparent background instead.</p>
+    </div>
+
+    <!-- ── HERO ── -->
+    <h2 id="hero">Hero &amp; Portrait Images</h2>
+    <table>
+      <thead><tr><th>File</th><th>Dimensions</th><th>Ratio</th><th>Used In</th></tr></thead>
+      <tbody>
+        <tr><td><code>hero/hero-photo.jpg</code></td><td>960×1200px min</td><td>4:5 portrait</td><td>Homepage hero section (right column)</td></tr>
+        <tr><td><code>hero/about-photo.jpg</code></td><td>960×1200px min</td><td>4:5 portrait</td><td>About page, blog single author bio</td></tr>
+      </tbody>
+    </table>
+    <p>The hero image is displayed in a 4:5 portrait ratio container. Use a clean portrait photo with the subject centered or slightly left. Avoid busy backgrounds — a soft bokeh or studio background works best with the dark template aesthetic.</p>
+    <p><strong>Recommended:</strong> Professional headshot, editorial portrait, or creative workspace photo. The template overlays floating stat cards on top, so leave some breathing room in the upper-right and lower-left areas.</p>
+
+    <!-- ── PROJECTS ── -->
+    <h2 id="projects">Project Images</h2>
+    <table>
+      <thead><tr><th>File</th><th>Dimensions</th><th>Ratio</th><th>Used In</th></tr></thead>
+      <tbody>
+        <tr><td><code>projects/project-1.jpg</code> … <code>project-9.jpg</code></td><td>1200×750px</td><td>16:10</td><td>Project grid thumbnails</td></tr>
+        <tr><td><code>projects/project-1-hero.jpg</code></td><td>1600×800px</td><td>2:1 wide</td><td>Project single page hero image</td></tr>
+        <tr><td><code>projects/project-1-screen-1.jpg</code> … <code>screen-4.jpg</code></td><td>1200×900px</td><td>4:3</td><td>Project single page gallery grid</td></tr>
+      </tbody>
+    </table>
+
+    <h3>What makes a great project thumbnail?</h3>
+    <ul>
+      <li>Show the actual interface, product, or output — not abstract graphics</li>
+      <li>Use consistent backgrounds (dark, light, or your brand color) across thumbnails for a cohesive grid</li>
+      <li>For UI screenshots: use a device mockup (browser window, phone frame) for professionalism</li>
+      <li>Avoid text-heavy thumbnails — let the visuals speak</li>
+      <li>Shoot logo/brand work on a neutral or brand-colored background</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Mockup Tools:</strong> <a href="https://mockuuups.studio" target="_blank" rel="noopener">Mockuuups Studio</a>, <a href="https://smartmockups.com" target="_blank" rel="noopener">Smartmockups</a>, or Figma's built-in device frames work great for UI project thumbnails.</p>
+    </div>
+
+    <!-- ── TESTIMONIALS ── -->
+    <h2 id="testimonials">Testimonial Avatars</h2>
+    <table>
+      <thead><tr><th>File</th><th>Dimensions</th><th>Format</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><code>testimonials/client-1.jpg</code> … <code>client-6.jpg</code></td><td>200×200px</td><td>JPG/WebP</td><td>Square avatar photos. Displayed at 44×44px in the template.</td></tr>
+      </tbody>
+    </table>
+    <p>Avatars are rendered as circles in the template. Center the subject's face in the frame. Professional LinkedIn-style headshots work perfectly here — or if a client doesn't have a photo, use their company's logo on a colored background.</p>
+    <p>If you have fewer than 6 testimonials, simply duplicate the existing cards and update the content — the images are referenced by number, so <code>client-1.jpg</code> can appear more than once.</p>
+
+    <!-- ── BLOG ── -->
+    <h2 id="blog">Blog Cover Images</h2>
+    <table>
+      <thead><tr><th>File</th><th>Dimensions</th><th>Ratio</th><th>Used In</th></tr></thead>
+      <tbody>
+        <tr><td><code>blog/blog-1.jpg</code> … <code>blog-6.jpg</code></td><td>1200×675px</td><td>16:9</td><td>Blog grid cards (thumbnail) and blog single hero</td></tr>
+      </tbody>
+    </table>
+    <p>Blog cover images should be visually interesting and support the article topic. Good sources for royalty-free high-quality images:</p>
+    <ul>
+      <li><a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> — high-quality photography, free</li>
+      <li><a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a> — free stock photos and videos</li>
+      <li><a href="https://midjourney.com" target="_blank" rel="noopener">Midjourney</a> — AI-generated, great for abstract/conceptual covers</li>
+      <li>Custom-designed covers in Figma — very professional look</li>
+    </ul>
+
+    <!-- ── CLIENTS ── -->
+    <h2 id="clients">Client / Brand Logos</h2>
+    <table>
+      <thead><tr><th>File</th><th>Format</th><th>Recommended Size</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><code>clients/client-logo-1.png</code> … </td><td>PNG (transparent) or SVG</td><td>200×80px max-height</td><td>Logos for the scrolling marquee / clients grid.</td></tr>
+      </tbody>
+    </table>
+    <p>Use white or light-colored versions of your clients' logos (most brand guidelines provide these). The template renders logos at 30% opacity and removes color (grayscale) by default, brightening on hover. This creates a clean, consistent look regardless of each logo's original color scheme.</p>
+
+    <div class="callout warn">
+      <p><strong>Important:</strong> Only use logos of clients/brands who have given you permission to display them on your portfolio. Many larger brands have policies about this. When in doubt, ask first or omit.</p>
+    </div>
+
+    <!-- ── OG ── -->
+    <h2 id="og">Open Graph / Social Preview Image</h2>
+    <table>
+      <thead><tr><th>File</th><th>Dimensions</th><th>Format</th></tr></thead>
+      <tbody>
+        <tr><td><code>og-image.jpg</code></td><td>1200×630px</td><td>JPG (keep under 300 KB)</td></tr>
+      </tbody>
+    </table>
+    <p>This image appears when your portfolio link is shared on Twitter, LinkedIn, Facebook, or iMessage. It should include your name, tagline, and a preview of your work — think of it as your portfolio's business card.</p>
+    <p>Design it in Figma or Canva. Include:</p>
+    <ul>
+      <li>Your name and title</li>
+      <li>A sample of your best work</li>
+      <li>Your website URL</li>
+      <li>On-brand colors that match your portfolio</li>
+    </ul>
+    <p>Update the <code>og:image</code> meta tag in every HTML file's <code>&lt;head&gt;</code> with the full absolute URL to this file:</p>
+    <pre><code>&lt;meta property="og:image" content="https://yourdomain.com/assets/images/og-image.jpg" /&gt;</code></pre>
+
+    <!-- ── OPTIMIZATION ── -->
+    <h2 id="optimization">Optimization Tips</h2>
+    <p>Optimized images are the single biggest performance improvement you can make. Target these sizes:</p>
+    <table>
+      <thead><tr><th>Image Type</th><th>Max File Size</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Hero portrait</td><td>200 KB</td><td>Most visible, compress carefully</td></tr>
+        <tr><td>Project thumbnails</td><td>80–120 KB each</td><td>Loaded as a grid, keep lean</td></tr>
+        <tr><td>Blog covers</td><td>100 KB each</td><td>16:9, consistent compression</td></tr>
+        <tr><td>Testimonial avatars</td><td>15 KB each</td><td>Tiny display size, compress aggressively</td></tr>
+        <tr><td>OG image</td><td>300 KB max</td><td>Required by some platforms</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Recommended Tools</h3>
+    <ul>
+      <li><a href="https://squoosh.app" target="_blank" rel="noopener">Squoosh</a> (free, browser-based) — best quality control</li>
+      <li><a href="https://tinypng.com" target="_blank" rel="noopener">TinyPNG</a> — batch compress JPG/PNG</li>
+      <li><a href="https://imageoptim.com" target="_blank" rel="noopener">ImageOptim</a> (Mac) — drag-and-drop batch compress</li>
+      <li><a href="https://sharp.pixelplumbing.com" target="_blank" rel="noopener">Sharp</a> (Node.js) — programmatic batch processing</li>
+    </ul>
+
+    <!-- ── FORMATS ── -->
+    <h2 id="formats">Formats &amp; Modern Images</h2>
+    <p>The template HTML uses standard <code>&lt;img&gt;</code> tags with JPG sources by default. For even better performance, use <code>&lt;picture&gt;</code> to serve WebP with JPG fallback:</p>
+    <pre><code>&lt;picture&gt;
+  &lt;source srcset="assets/images/projects/project-1.webp" type="image/webp" /&gt;
+  &lt;img src="assets/images/projects/project-1.jpg"
+       alt="Project thumbnail"
+       width="600" height="375"
+       loading="lazy" /&gt;
+&lt;/picture&gt;</code></pre>
+    <p>WebP typically reduces file size by 25–35% vs. JPG at the same visual quality. Convert your JPGs to WebP using <a href="https://squoosh.app" target="_blank" rel="noopener">Squoosh</a> or the <code>cwebp</code> command-line tool.</p>
+
+    <h3>Lazy Loading</h3>
+    <p>All images below the fold already include <code>loading="lazy"</code> in the template HTML. This defers loading until the image is about to enter the viewport, significantly improving initial page load time. Don't add <code>loading="lazy"</code> to the hero image — it should load immediately.</p>
+
+    <h3>Always specify width and height</h3>
+    <p>Every <code>&lt;img&gt;</code> tag in the template includes <code>width</code> and <code>height</code> attributes. These prevent Cumulative Layout Shift (CLS) by reserving the correct space before the image loads. Keep these accurate when you replace images with different aspect ratios.</p>
+
+    <div class="callout tip">
+      <p><strong>Core Web Vitals:</strong> Optimize your hero image (LCP element) first — it has the biggest impact on your Lighthouse performance score. Aim for a score of 90+ on both mobile and desktop.</p>
+    </div>
+  </main>
+</div>
+</body>
+</html>

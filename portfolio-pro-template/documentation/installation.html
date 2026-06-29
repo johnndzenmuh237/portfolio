@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation Guide — Portfolio Pro Template</title>
+  <style>
+    :root {
+      --bg: #0C0C0F; --surface: #131317; --border: #242430;
+      --accent: #7B5EF6; --accent2: #5BE8C8; --text: #E8E8F0;
+      --muted: #7A7A90; --white: #fff;
+      --mono: 'JetBrains Mono', 'Fira Code', monospace;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.7; }
+    a { color: var(--accent); }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: 260px; flex-shrink: 0; background: var(--surface);
+      border-right: 1px solid var(--border); padding: 2rem 1.5rem;
+      position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    }
+    .sidebar-logo { font-size: 1.25rem; font-weight: 800; color: var(--white); margin-bottom: 2rem; letter-spacing: -.02em; }
+    .sidebar-logo span { color: var(--accent); }
+    .sidebar-section { margin-bottom: 1.5rem; }
+    .sidebar-section h4 { font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: .75rem; font-family: var(--mono); }
+    .sidebar-section a { display: block; font-size: .875rem; color: var(--muted); padding: .35rem 0; text-decoration: none; transition: color .2s; border-left: 2px solid transparent; padding-left: .75rem; margin-left: -.75rem; }
+    .sidebar-section a:hover, .sidebar-section a.active { color: var(--accent); border-left-color: var(--accent); }
+    .content { flex: 1; padding: 3rem 4rem; max-width: 860px; }
+    h1 { font-size: 2.5rem; font-weight: 800; color: var(--white); margin-bottom: 1rem; letter-spacing: -.03em; }
+    h2 { font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 3rem 0 1rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    h3 { font-size: 1.125rem; font-weight: 600; color: var(--white); margin: 2rem 0 .5rem; }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    ul, ol { color: var(--muted); padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: .5rem; }
+    code { font-family: var(--mono); font-size: .875rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; color: var(--accent2); }
+    pre { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; overflow-x: auto; margin: 1.5rem 0; }
+    pre code { background: none; border: none; padding: 0; color: var(--accent2); font-size: .8125rem; line-height: 1.8; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .7rem; font-weight: 600; font-family: var(--mono); border: 1px solid; margin-right: .25rem; }
+    .badge-green  { background: rgba(34,197,94,.1);  border-color: rgba(34,197,94,.3);  color: #22c55e; }
+    .badge-blue   { background: rgba(59,130,246,.1); border-color: rgba(59,130,246,.3); color: #3b82f6; }
+    .badge-purple { background: rgba(123,94,246,.1); border-color: rgba(123,94,246,.3); color: var(--accent); }
+    .callout { border-left: 3px solid var(--accent); background: rgba(123,94,246,.06); border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .callout p { margin: 0; }
+    .callout.tip  { border-color: var(--accent2); background: rgba(91,232,200,.06); }
+    .callout.warn { border-color: #f59e0b; background: rgba(245,158,11,.06); }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .875rem; }
+    th { background: var(--surface); color: var(--white); padding: .75rem 1rem; text-align: left; border: 1px solid var(--border); }
+    td { padding: .75rem 1rem; border: 1px solid var(--border); color: var(--muted); }
+    tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+    @media (max-width: 768px) { .sidebar { display: none; } .content { padding: 2rem 1.5rem; } }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">Portfolio<span>Pro</span></div>
+    <div class="sidebar-section">
+      <h4>Getting Started</h4>
+      <a href="installation.html" class="active">Installation</a>
+      <a href="customization.html">Customization</a>
+      <a href="assets-guide.html">Assets Guide</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>On This Page</h4>
+      <a href="#requirements">Requirements</a>
+      <a href="#structure">File Structure</a>
+      <a href="#quickstart">Quick Start</a>
+      <a href="#local-dev">Local Development</a>
+      <a href="#deployment">Deployment</a>
+      <a href="#troubleshooting">Troubleshooting</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>Resources</h4>
+      <a href="../index.html">← Back to Template</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <p style="font-family:var(--mono);font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">Documentation</p>
+    <h1>Installation Guide</h1>
+    <p style="font-size:1.125rem;">Everything you need to get Portfolio Pro Template up and running in minutes.</p>
+
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+      <span class="badge badge-green">v1.0.0</span>
+      <span class="badge badge-blue">No Build Required</span>
+      <span class="badge badge-purple">Vanilla HTML/CSS/JS</span>
+    </div>
+
+    <h2 id="requirements">Requirements</h2>
+    <p>Portfolio Pro Template is a pure HTML/CSS/JavaScript template — no build tools, no frameworks, no Node.js required. All you need is:</p>
+    <ul>
+      <li>A modern web browser (Chrome, Firefox, Safari, Edge)</li>
+      <li>A text editor (VS Code recommended)</li>
+      <li>A web server or hosting provider to deploy</li>
+      <li><em>Optional:</em> <a href="https://code.visualstudio.com/docs/editor/live-preview">VS Code Live Preview</a> or <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server extension</a> for local development</li>
+    </ul>
+
+    <h2 id="structure">File Structure</h2>
+    <pre><code>portfolio-pro-template/
+│
+├── index.html              ← Homepage
+├── about.html              ← About page
+├── projects.html           ← Portfolio grid
+├── project-single.html     ← Individual case study
+├── services.html           ← Services + pricing
+├── blog.html               ← Blog listing
+├── blog-single.html        ← Individual blog post
+├── testimonials.html       ← Client reviews
+├── contact.html            ← Contact form
+├── 404.html                ← Error page
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css       ← Core styles & variables
+│   │   ├── responsive.css  ← Breakpoint overrides
+│   │   ├── animations.css  ← Scroll-triggered animations
+│   │   ├── dark-mode.css   ← Light/dark mode styles
+│   │   └── themes.css      ← Color theme swatches
+│   │
+│   ├── js/
+│   │   ├── main.js         ← Core: nav, cursor, counters…
+│   │   ├── portfolio-filter.js ← Filter + lightbox
+│   │   ├── slider.js       ← Testimonial + hero slider
+│   │   ├── contact-form.js ← Form validation + submit
+│   │   └── darkmode.js     ← Theme persistence
+│   │
+│   ├── images/             ← Your images go here
+│   │   ├── logo/           ← logo.svg, favicon.png
+│   │   ├── hero/           ← hero-photo.jpg, about-photo.jpg
+│   │   ├── projects/       ← project-1.jpg … project-9.jpg
+│   │   ├── testimonials/   ← client-1.jpg … client-6.jpg
+│   │   ├── blog/           ← blog-1.jpg … blog-6.jpg
+│   │   ├── clients/        ← client logo PNGs (for marquee)
+│   │   └── icons/          ← any custom SVG icons
+│   │
+│   └── fonts/              ← Self-hosted fonts (optional)
+│
+├── documentation/
+│   ├── installation.html   ← This file
+│   ├── customization.html  ← Customization guide
+│   └── assets-guide.html   ← Image & asset guidelines
+│
+└── README.md</code></pre>
+
+    <h2 id="quickstart">Quick Start</h2>
+    <h3>Step 1 — Download &amp; Unzip</h3>
+    <p>Unzip the template into your projects folder. No npm install, no build step.</p>
+    <pre><code>unzip portfolio-pro-template.zip -d my-portfolio
+cd my-portfolio</code></pre>
+
+    <h3>Step 2 — Add Your Images</h3>
+    <p>Place your images in the correct folders under <code>assets/images/</code>. See the <a href="assets-guide.html">Assets Guide</a> for exact filenames and recommended dimensions.</p>
+
+    <h3>Step 3 — Personalise the Content</h3>
+    <p>Open each HTML file in your text editor and replace all placeholder text marked with square brackets:</p>
+    <pre><code>&lt;!-- Find and replace these placeholders: --&gt;
+[Your Name]          → Your actual name
+[YN]                 → Your initials (logo text)
+[Your City, Country] → e.g. London, UK
+hello@yourdomain.com → Your email address
+yourdomain.com       → Your website URL
+yourusername         → Your social media handles</code></pre>
+
+    <div class="callout tip">
+      <p><strong>VS Code Tip:</strong> Use <kbd>Ctrl+Shift+H</kbd> (Find &amp; Replace across files) to replace all placeholders at once.</p>
+    </div>
+
+    <h3>Step 4 — Customise Colours &amp; Fonts</h3>
+    <p>Open <code>assets/css/style.css</code> and edit the CSS custom properties in the <code>:root</code> block. See the <a href="customization.html">Customization Guide</a> for details.</p>
+
+    <h3>Step 5 — Connect Your Contact Form</h3>
+    <p>The contact form works out of the box in "demo mode" (simulates success). To connect it to a real backend, add your endpoint URL to the form's <code>data-endpoint</code> attribute:</p>
+    <pre><code>&lt;!-- Formspree (free tier available) --&gt;
+&lt;form id="contact-form" data-endpoint="https://formspree.io/f/YOUR_FORM_ID"&gt;
+
+&lt;!-- Netlify Forms (automatic when deployed to Netlify) --&gt;
+&lt;form id="contact-form" name="contact" netlify&gt;</code></pre>
+
+    <h2 id="local-dev">Local Development</h2>
+    <p>Because the template uses ES modules and fetch, you need to serve it over HTTP (not file://).</p>
+    <h3>Option A — VS Code Live Server (Recommended)</h3>
+    <ol>
+      <li>Install the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noopener">Live Server extension</a></li>
+      <li>Open the template folder in VS Code</li>
+      <li>Right-click <code>index.html</code> → "Open with Live Server"</li>
+    </ol>
+    <h3>Option B — Python HTTP Server</h3>
+    <pre><code># Python 3
+python -m http.server 3000
+# Then visit: http://localhost:3000</code></pre>
+    <h3>Option C — Node.js serve</h3>
+    <pre><code>npx serve .
+# Then visit the URL shown in your terminal</code></pre>
+
+    <h2 id="deployment">Deployment</h2>
+    <p>Since this is pure HTML/CSS/JS, it can be hosted anywhere that serves static files.</p>
+    <table>
+      <thead><tr><th>Platform</th><th>Free Tier</th><th>Deploy Method</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Netlify</strong></td><td>✅ Yes</td><td>Drag &amp; drop the folder to netlify.com/drop</td></tr>
+        <tr><td><strong>Vercel</strong></td><td>✅ Yes</td><td><code>npx vercel</code> or connect GitHub repo</td></tr>
+        <tr><td><strong>GitHub Pages</strong></td><td>✅ Yes</td><td>Push to repo → Settings → Pages → Deploy from branch</td></tr>
+        <tr><td><strong>Cloudflare Pages</strong></td><td>✅ Yes</td><td>Connect GitHub → build command: none</td></tr>
+        <tr><td><strong>Traditional Host (cPanel)</strong></td><td>Varies</td><td>Upload via FTP to public_html folder</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <p><strong>Netlify Recommended:</strong> Connect your GitHub repo and every push auto-deploys. Add your Netlify form ID for instant form handling with no backend code.</p>
+    </div>
+
+    <h3>Custom Domain</h3>
+    <p>Update the canonical URL and Open Graph meta tags in every HTML file's <code>&lt;head&gt;</code> to reflect your actual domain before going live:</p>
+    <pre><code>&lt;link rel="canonical" href="https://yourdomain.com" /&gt;
+&lt;meta property="og:url" content="https://yourdomain.com" /&gt;</code></pre>
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <h3>Images not showing</h3>
+    <p>Check that your image filenames exactly match the <code>src</code> paths in the HTML. Image paths are case-sensitive on Linux servers. See the <a href="assets-guide.html">Assets Guide</a> for the full list of expected filenames.</p>
+    <h3>Animations not working</h3>
+    <p>The JavaScript must be loaded and the page served over HTTP. Animations use <code>IntersectionObserver</code> — if you're opening the HTML directly as a file (<code>file://</code>), some features may not work. Use a local server (see above).</p>
+    <h3>Dark mode not persisting</h3>
+    <p>The theme preference is saved to <code>localStorage</code>. Ensure the page is served over HTTP and that you haven't disabled localStorage in your browser settings.</p>
+    <h3>Contact form sending to nowhere</h3>
+    <p>By default the form runs in demo mode. Add your <code>data-endpoint</code> attribute (see Step 5 above) to connect it to a real backend.</p>
+  </main>
+</div>
+</body>
+</html>

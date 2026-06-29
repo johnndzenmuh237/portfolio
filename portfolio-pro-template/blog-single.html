@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0C0C0F" />
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/themes.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <meta name="description" content="Everything you need to know about building scalable design systems that your whole team will actually use." />
+  <title>Design Systems: Why Every Team Needs One — [Your Name]</title>
+</head>
+<body>
+  <div id="preloader" aria-hidden="true"><div class="preloader-inner"><div class="preloader-logo">[YN]<span style="color:var(--clr-accent)">.</span></div><div class="preloader-bar-wrap"><div class="preloader-bar"></div></div></div></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <header id="navbar" role="banner"><div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Home"><img src="assets/images/logo/logo.svg" alt="Logo" onerror="this.style.display='none'" />[YN]<span class="logo-dot"></span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Work</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-icon-btn" aria-label="Toggle dark mode" data-darkmode-toggle>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary">Hire Me</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div></header>
+  <nav class="nav-mobile" aria-label="Mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Work</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn-primary mt-4">Hire Me</a></nav>
+  <main id="main-content">
+    <section class="blog-single-header"><div class="container">
+      <div class="breadcrumb" style="justify-content:center;"><a href="index.html">Home</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><a href="blog.html">Blog</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg><span>Design Systems</span></div>
+      <div style="margin:1rem 0;"><span class="badge badge-accent">Design Systems</span><span class="badge" style="margin-left:.5rem;">UI/UX</span></div>
+      <h1 data-animate="fade-up">Design Systems: Why Every Team Needs One in 2024</h1>
+      <div class="blog-author-row" data-animate="fade-up" data-delay="100">
+        <img src="assets/images/hero/about-photo.jpg" alt="[Your Name]" style="width:40px;height:40px;border-radius:50%;object-fit:cover;" loading="lazy" />
+        <span class="blog-author-name">[Your Name]</span>
+        <span class="blog-author-sep">·</span>
+        <span class="blog-author-date">June 12, 2024</span>
+        <span class="blog-author-sep">·</span>
+        <span class="blog-author-date">8 min read</span>
+      </div>
+    </div></section>
+
+    <section class="section--sm"><div class="container">
+      <img src="assets/images/blog/blog-1.jpg" alt="Design Systems article cover" class="blog-cover-image" data-animate="fade-up" />
+
+      <div class="blog-body">
+        <article class="blog-content" data-animate="fade-right">
+          <p>If you've ever rebuilt the same button component for the third time, or spent an afternoon hunting down which shade of blue your brand actually uses — you've felt the pain that a design system is built to solve.</p>
+
+          <h2>What Is a Design System?</h2>
+          <p>A design system is more than a component library. It's a shared language between designers and developers — a single source of truth that includes visual style (color, typography, spacing), reusable UI components, usage guidelines, and the principles and patterns that govern how everything fits together.</p>
+          <p>Think of it as the foundation of a building: invisible to most people, but everything depends on it being solid.</p>
+
+          <blockquote>"A design system is a product serving products. It requires the same care, maintenance, and governance as any other product you ship."</blockquote>
+
+          <h2>Why Teams Resist Building One</h2>
+          <p>The most common objection is time. Teams are moving fast, shipping features, and a design system feels like a big upfront investment with uncertain returns. This is the wrong mental model.</p>
+          <p>A better way to think about it: every time you build a new component without a system, you're taking out technical and design debt. That debt has compound interest.</p>
+
+          <h2>Where to Start</h2>
+          <p>Don't start by building — start by auditing. Open your product and screenshot every button, card, input, heading, and color you can find. You'll likely discover 12 shades of grey, 4 different button styles, and 3 competing type scales. That audit is your inventory, and your design system is the process of consolidating it.</p>
+
+          <pre>/* Before: inconsistent */
+.btn-blue { background: #3B82F6; }
+.btn-primary { background: #4F46E5; }
+.cta-button { background: #6366F1; }
+
+/* After: tokenised */
+.btn-primary { background: var(--color-brand-600); }</pre>
+
+          <h2>The Atomic Design Approach</h2>
+          <p>Brad Frost's Atomic Design methodology gives us a great mental model: start with atoms (tokens, base styles), build molecules (components), then organisms (sections), and finally templates and pages. Each layer depends on the one below it, making the system inherently scalable.</p>
+
+          <h2>Governance and Maintenance</h2>
+          <p>A design system without governance is just a suggestion. Someone — ideally a small dedicated team or a rotating "system guild" — needs to own decisions about what goes into the system, how it evolves, and how it's communicated to the rest of the organisation.</p>
+          <p>Document not just the what, but the why. Future team members (and your future self) will thank you.</p>
+
+          <h2>Final Thoughts</h2>
+          <p>Building a design system is one of the highest-leverage investments a product team can make. Start small, stay consistent, and treat it as a product — because it is. The teams that do this well ship faster, maintain higher quality, and onboard new members in days instead of weeks.</p>
+
+          <div style="border-top:1px solid var(--clr-border);margin-top:3rem;padding-top:2rem;">
+            <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+              <span style="font-size:.875rem;color:var(--clr-text-muted);">Tags:</span>
+              <span class="badge">Design Systems</span><span class="badge">UI/UX</span><span class="badge">Figma</span><span class="badge">Frontend</span>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:1.5rem;margin-top:2rem;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:1.5rem;">
+            <img src="assets/images/hero/about-photo.jpg" alt="[Your Name]" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;" />
+            <div>
+              <p style="font-size:.875rem;font-weight:600;color:var(--clr-text);margin-bottom:.25rem;">[Your Name]</p>
+              <p style="font-size:.875rem;">Freelance designer and developer with 8+ years of experience helping brands build beautiful digital products. <a href="about.html" style="color:var(--clr-accent);">Learn more →</a></p>
+            </div>
+          </div>
+        </article>
+
+        <aside class="blog-sidebar">
+          <div class="blog-sidebar-widget">
+            <h4>Table of Contents</h4>
+            <ul style="display:flex;flex-direction:column;gap:.75rem;">
+              <li><a href="#" style="font-size:.875rem;color:var(--clr-text-muted);transition:color .2s;" onmouseover="this.style.color='var(--clr-accent)'" onmouseout="this.style.color='var(--clr-text-muted)'">What Is a Design System?</a></li>
+              <li><a href="#" style="font-size:.875rem;color:var(--clr-text-muted);" onmouseover="this.style.color='var(--clr-accent)'" onmouseout="this.style.color='var(--clr-text-muted)'">Why Teams Resist</a></li>
+              <li><a href="#" style="font-size:.875rem;color:var(--clr-text-muted);" onmouseover="this.style.color='var(--clr-accent)'" onmouseout="this.style.color='var(--clr-text-muted)'">Where to Start</a></li>
+              <li><a href="#" style="font-size:.875rem;color:var(--clr-text-muted);" onmouseover="this.style.color='var(--clr-accent)'" onmouseout="this.style.color='var(--clr-text-muted)'">Atomic Design</a></li>
+              <li><a href="#" style="font-size:.875rem;color:var(--clr-text-muted);" onmouseover="this.style.color='var(--clr-accent)'" onmouseout="this.style.color='var(--clr-text-muted)'">Governance</a></li>
+              <li><a href="#" style="font-size:.875rem;color:var(--clr-text-muted);" onmouseover="this.style.color='var(--clr-accent)'" onmouseout="this.style.color='var(--clr-text-muted)'">Final Thoughts</a></li>
+            </ul>
+          </div>
+          <div class="blog-sidebar-widget">
+            <h4>Newsletter</h4>
+            <p style="font-size:.875rem;margin-bottom:1rem;">Get new articles in your inbox. No spam.</p>
+            <form class="newsletter-form" style="display:flex;flex-direction:column;gap:.5rem;" data-endpoint="#">
+              <input type="email" placeholder="your@email.com" aria-label="Email" />
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Subscribe</button>
+            </form>
+            <p class="newsletter-msg" style="font-size:.75rem;margin-top:.5rem;"></p>
+          </div>
+          <div class="blog-sidebar-widget">
+            <h4>Recent Posts</h4>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <a href="blog-single.html" style="display:flex;gap:.75rem;transition:opacity .2s;" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
+                <img src="assets/images/blog/blog-2.jpg" alt="CSS Tricks" style="width:56px;height:56px;object-fit:cover;border-radius:8px;flex-shrink:0;" loading="lazy" />
+                <div><p style="font-size:.8125rem;font-weight:500;color:var(--clr-text);line-height:1.4;">10 CSS Tricks That Will Change How You Write Styles</p><p style="font-size:.75rem;color:var(--clr-text-muted);margin-top:.25rem;">Jun 9, 2024</p></div>
+              </a>
+              <a href="blog-single.html" style="display:flex;gap:.75rem;transition:opacity .2s;" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
+                <img src="assets/images/blog/blog-3.jpg" alt="Color Psychology" style="width:56px;height:56px;object-fit:cover;border-radius:8px;flex-shrink:0;" loading="lazy" />
+                <div><p style="font-size:.8125rem;font-weight:500;color:var(--clr-text);line-height:1.4;">The Psychology of Color in Brand Design</p><p style="font-size:.75rem;color:var(--clr-text-muted);margin-top:.25rem;">Jun 6, 2024</p></div>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Prev / Next -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:4rem;border-top:1px solid var(--clr-border);padding-top:2rem;">
+        <a href="blog.html" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(123,94,246,.4)'" onmouseout="this.style.borderColor='var(--clr-border)'"><span style="font-size:.75rem;font-family:var(--font-mono);color:var(--clr-text-faint);">Previous Article</span><span style="font-size:1rem;font-weight:600;">10 CSS Tricks That Will Change How You Write Styles</span></a>
+        <a href="blog.html" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;text-align:right;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(123,94,246,.4)'" onmouseout="this.style.borderColor='var(--clr-border)'"><span style="font-size:.75rem;font-family:var(--font-mono);color:var(--clr-text-faint);">Next Article</span><span style="font-size:1rem;font-weight:600;">The Psychology of Color in Brand Design</span></a>
+      </div>
+    </div></section>
+  </main>
+  <footer role="contentinfo"><div class="container">
+    <div class="footer-main">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:.5rem;">[YN]<span class="logo-dot"></span></a><p>Crafting purposeful digital experiences for brands that dare to stand out.</p></div>
+      <div class="footer-col"><h4>Navigation</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="services.html">UI/UX Design</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Brand Identity</a></li><li><a href="services.html">Motion Design</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li><li><a href="#">[Your City, Country]</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; <span id="footer-year"></span> [Your Name]. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a></div></div>
+  </div></footer>
+  <button id="back-to-top" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <div id="cookie-banner" role="dialog" aria-live="polite"><p>This site uses cookies. <a href="#" style="color:var(--clr-accent)">Learn more</a></p><div class="cookie-actions"><button id="cookie-accept" class="btn btn-primary" style="padding:10px 20px;">Accept</button><button id="cookie-reject" class="btn btn-secondary" style="padding:10px 20px;">Decline</button></div></div>
+  <script src="assets/js/darkmode.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio-filter.js"></script>
+  <script src="assets/js/slider.js"></script>
+  <script src="assets/js/contact-form.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
