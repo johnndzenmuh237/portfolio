@@ -15,6 +15,81 @@
   <link rel="stylesheet" href="assets/css/responsive.css" />
   <meta name="description" content="Explore the design and development services offered by [Your Name], including UI/UX, web development, branding, and more." />
   <title>Services — [Your Name] | Freelance Designer</title>
+
+  <!-- ══ Services/Pricing responsive fix ══
+       Loaded last so it wins the cascade over style.css / responsive.css.
+       Problem it solves: the service & pricing cards were overflowing their
+       grid tracks (long text/badges forcing a column wider than its track),
+       which pushed the whole grid past the viewport edge and made the page
+       scrollable sideways. The fix below stops any element from forcing
+       horizontal scroll and makes the grids reflow into fewer columns
+       (down to 1 on small screens) instead of spilling outside the page. -->
+  <style id="services-responsive-fix">
+    html, body {
+      overflow-x: hidden;   /* belt-and-suspenders: nothing can scroll the page sideways */
+      max-width: 100%;
+    }
+
+    .services-grid,
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .service-card,
+    .pricing-card {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;        /* the real fix: lets a grid item shrink below its content's natural width */
+      box-sizing: border-box;
+      transform: none;     /* drop any scale()/translate() that was nudging the featured card sideways */
+    }
+
+    .service-tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      max-width: 100%;
+    }
+
+    .service-tech-list .badge {
+      white-space: normal;
+      max-width: 100%;
+    }
+
+    .service-card h3,
+    .service-card p,
+    .pricing-card * {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .pricing-card--featured {
+      grid-column: auto;   /* don't let the "featured" card claim extra columns and skew the row */
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 860px) {
+      .services-grid,
+      .pricing-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;  /* single column on phones — stacks straight down, no sideways drift */
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- ══ PRELOADER ══ -->
