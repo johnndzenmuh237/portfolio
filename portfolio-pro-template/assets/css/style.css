@@ -1930,3 +1930,10 @@ footer {
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
+.hero-image-wrap .main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
